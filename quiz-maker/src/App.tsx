@@ -1,22 +1,26 @@
-import { useState } from 'react';
 import './App.css'
-import type { TriviaCategory } from '@/types/trivia/triviaCategory';
 
 import Title from './components/Title';
-import type { TriviaDifficulty } from './types/trivia/triviaDifficulty';
-import useGetQuestions from './hooks/useGetQuestions';
 import QuestionList from './components/quiz/quizQuestion/QuestionList';
 import QuizConfigurator from './components/quiz/quizConfiguration/QuizConfigurator';
+import { useState } from 'react';
+import type { TriviaQuestion } from './types/trivia/triviaQuestion';
+import { useQuizContext } from './hooks/useQuizContext';
+import { NB_QUESTIONS_IN_QUIZ } from './constants/quizConstant';
+import { Button } from './components/ui/button';
 function App() {
-  const [selectedCategory, setSelectedCategory] = useState<TriviaCategory>();
-  const [selectedDifficulty, setSelectedDifficulty] = useState<TriviaDifficulty>();
-  const { data: questions, refetch: onCreateQuiz } = useGetQuestions(selectedCategory?.id ?? 0, selectedDifficulty ?? "", 5);
+  const [questions, setQuestions] = useState<TriviaQuestion[]>();
+  const {selectedAnswers} = useQuizContext();
 
+  const onSubmitQuiz = () => {
+  }
+  
   return (
     <div>
       <Title title='QUIZ MAKER' />
-      <QuizConfigurator setSelectedCategory={setSelectedCategory} setSelectedDifficulty={setSelectedDifficulty} onCreateQuiz={onCreateQuiz}/>
+      <QuizConfigurator setQuestions={setQuestions}/>
       <QuestionList questions={questions} />
+      {Object.keys(selectedAnswers).length === NB_QUESTIONS_IN_QUIZ && <div className='mt-4'><Button onClick={onSubmitQuiz}>Submit</Button></div>}
     </div>
   )
 }

@@ -1,0 +1,1 @@
+export const NB_QUESTIONS_IN_QUIZ = 5;

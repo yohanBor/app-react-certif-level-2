@@ -1,0 +1,1 @@
+export type Answer = Record<string, string>; // key: question, value: selected answer
