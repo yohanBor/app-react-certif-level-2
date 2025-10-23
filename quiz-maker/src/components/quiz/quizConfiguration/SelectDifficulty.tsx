@@ -1,5 +1,5 @@
 import { DIFFICULTY, type TriviaDifficulty } from "@/types/trivia/triviaDifficulty";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../../ui/select";
 
 interface SelectDifficultyProps {
     setSelectedDifficulty: React.Dispatch<React.SetStateAction<TriviaDifficulty | undefined>>

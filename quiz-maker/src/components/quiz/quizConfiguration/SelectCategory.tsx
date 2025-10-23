@@ -1,11 +1,11 @@
-import useGetCategories from "../hooks/useGetCategories";
+import useGetCategories from "../../../hooks/useGetCategories";
 import {
     Select,
     SelectTrigger,
     SelectValue,
     SelectContent,
     SelectItem,
-} from "./ui/select";
+} from "../../ui/select";
 import type { TriviaCategory } from "@/types/trivia/triviaCategory";
 
 interface SelectCategoryProps {

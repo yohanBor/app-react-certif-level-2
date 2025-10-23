@@ -1,5 +1,5 @@
 import type { TriviaQuestion } from "@/types/trivia/triviaQuestion";
-import { Button } from "./ui/button";
+import { Button } from "../../ui/button";
 
 interface QuestionItemProps {
     question: TriviaQuestion
