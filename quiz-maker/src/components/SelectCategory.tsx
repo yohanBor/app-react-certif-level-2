@@ -18,14 +18,14 @@ interface SelectCategoryProps {
  * @returns 
  */
 const SelectCategory = ({ setSelectedCategory }: SelectCategoryProps) => {
-    const { data } = useGetCategories();
+    const { data: categories } = useGetCategories();
 
     return <Select>
         <SelectTrigger id="categorySelect" className="w-[280px]">
             <SelectValue placeholder="Select a category" />
         </SelectTrigger>
         <SelectContent>
-            {data?.map((category) => (
+            {categories?.map((category) => (
                 <SelectItem key={category.id} value={category.id.toString()} onClick={() => setSelectedCategory(category)}>
                     {category.name}
                 </SelectItem>
