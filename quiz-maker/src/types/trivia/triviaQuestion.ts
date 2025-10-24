@@ -6,7 +6,8 @@ export type TriviaQuestion = {
     difficulty: TriviaDifficulty,
     question: string,
     correct_answer: string,
-    incorrect_answers: string[]
+    incorrect_answers: string[],
+    possibleAnswers: string[]
 }
 
 export type GetTriviaQuestionResponse = {
