@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router'
 import Layout from './layout/Layout.tsx'
 import { QueryClientProvider } from '@tanstack/react-query'
 import { QuizProvider } from './hooks/useQuizContext.tsx'
-import { queryClient } from './lib/react-query.ts'
+import { queryClient } from './lib/reactQuery.ts'
 import QuizQuestionPage from './pages/QuizQuestionPage.tsx'
 import QuizResultPage from './pages/QuizResultPage.tsx'
 
