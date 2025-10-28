@@ -5,7 +5,7 @@ interface CreateQuizBtnProps {
 }
 
 const CreateQuizBtn = ({ onClick }: CreateQuizBtnProps) => {
-    return <Button size="sm" variant="outline" onClick={onClick}>Create</Button>
+    return <Button size="sm" variant="outline" onClick={onClick} id="createBtn">Create</Button>
 }
 
 export default CreateQuizBtn;
