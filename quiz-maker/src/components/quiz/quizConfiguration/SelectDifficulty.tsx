@@ -11,7 +11,7 @@ const SelectDifficulty = ({setSelectedDifficulty}: SelectDifficultyProps) => {
             <SelectValue placeholder="Select a difficulty" />
         </SelectTrigger>
         <SelectContent>
-            {Object.values(DIFFICULTY).map((difficulty) => (
+            {DIFFICULTY.map((difficulty) => (
                 <SelectItem key={difficulty} value={difficulty} onClick={() => setSelectedDifficulty(difficulty)}>
                     {difficulty}
                 </SelectItem>

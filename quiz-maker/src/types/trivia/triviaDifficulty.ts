@@ -1,7 +1,3 @@
-export const DIFFICULTY = {
-    EASY: 'easy',
-    MEDIUM: 'medium',
-    HARD: 'hard',
-} as const;
+export const DIFFICULTY = ['easy' , 'medium' ,'hard'] as const;
 
-export type TriviaDifficulty = typeof DIFFICULTY[keyof typeof DIFFICULTY];
+export type TriviaDifficulty = typeof DIFFICULTY[number];
