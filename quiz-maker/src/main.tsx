@@ -13,7 +13,7 @@ createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
       <QuizProvider>
-        <BrowserRouter>
+        <BrowserRouter basename='app-react-certif-level-2'>
           <Routes>
             <Route element={<Layout />}>
               <Route path='/' element={<QuizQuestionPage />} />

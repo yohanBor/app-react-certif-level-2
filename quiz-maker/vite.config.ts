@@ -11,4 +11,5 @@ export default defineConfig({
     },
   },
   plugins: [react(), tailwindcss()],
+  base: '/app-react-certif-level-2/'
 })
