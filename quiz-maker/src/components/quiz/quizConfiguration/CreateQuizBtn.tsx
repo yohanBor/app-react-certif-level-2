@@ -8,7 +8,11 @@ interface CreateQuizBtnProps {
 const CreateQuizBtn = ({ onClick }: CreateQuizBtnProps) => {
     const { setSelectedAnswers } = useQuizContext();
 
-    return <Button size="sm" variant="outline" onClick={() => { setSelectedAnswers({}); onClick() }} id="createBtn">Create</Button>
+    const onCreateQuiz = () => {
+        setSelectedAnswers({}); onClick()
+    }
+
+    return <Button size="sm" variant="outline" onClick={onCreateQuiz} id="createBtn">Create</Button>
 }
 
 export default CreateQuizBtn;
